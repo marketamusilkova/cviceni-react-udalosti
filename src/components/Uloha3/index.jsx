@@ -9,30 +9,33 @@ Zadání: Doplňte komponentu tak, aby každé tlačítko po kliknutí vypsalo, 
 */
 
 export const Uloha3 = () => {
+  const vypisObdobi = (obdobi) => {
+    console.log(`Uživatel kliknul na tlačítko ${obdobi}.`)
+  }
   return (
     <>
       Které roční období je ve střední Evropě nejteplejší?
       <ol>
         <li>
-          <button>
+          <button onClick={() => vypisObdobi("jaro")}>
             <img src={kvetinaUrl} width={16} height={16} alt="květina" />
             jaro (březen až květen)
           </button>
         </li>
         <li>
-          <button>
+          <button onClick={() => vypisObdobi("léto")}>
             <img src={slunceUrl} width={16} height={16} alt="slunce" />
             léto (červen až srpen)
           </button>
         </li>
         <li>
-          <button>
+          <button onClick={() => vypisObdobi("podzim")}>
             <img src={listUrl} width={16} height={16} alt="list" />
             podzim (září až listopad)
           </button>
         </li>
         <li>
-          <button>
+          <button onClick={() => vypisObdobi("zima")}>
             <img src={vlockaUrl} width={16} height={16} alt="vločka" />
             zima (prosinec až únor)
           </button>
@@ -41,3 +44,4 @@ export const Uloha3 = () => {
     </>
   );
 };
+

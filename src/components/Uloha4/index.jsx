@@ -6,5 +6,10 @@ Zadání 2: Pokud uživatel z textového políčka vše smaže, vypište „Uži
 */
 
 export const Uloha4 = () => {
-  return <input />;
+  const coNapsal = (e) => {
+    e.target.value === ''
+      ? console.log('Uživatel nic nenasal.')
+      : console.log(e.target.value);
+  };
+  return <input onChange={coNapsal} />;
 };
